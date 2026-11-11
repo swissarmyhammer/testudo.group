@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   The Sparkle update feed of OpenTestudo: https://testudo.group/appcast.xml
-  The channel has no items now. The release workflow adds one <item> for each
-  release: the version, the notarized download URL, its length and its EdDSA
-  signature (sparkle:edSignature). Do not add items by hand.
+  The release ("Scripts/xcodebuild-app.sh notarize", which
+  .github/workflows/release.yml runs) adds one <item> for each release with
+  "release-tool appcast-item": the version, the URL of the notarized zip in
+  /downloads, its length and its EdDSA signature (sparkle:edSignature). Do not
+  add items by hand.
 -->
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
